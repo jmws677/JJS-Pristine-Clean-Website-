@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>JJS Pristine Clean | Mobile Valeting & Property Cleaning Bournemouth</title>
-  <meta name="description" content="Professional mobile car valeting, driveway cleaning, patio & roof cleaning in Bournemouth, Poole & Christchurch. Book via WhatsApp today!">
-  <meta name="keywords" content="mobile car valeting Bournemouth, driveway cleaning Poole, patio cleaning Christchurch, property cleaning Dorset, window cleaning Bournemouth, car valeting Hampshire, pressure washing Wiltshire, car valeting Southampton, driveway cleaning Salisbury">
+  <meta name="description" content="Expert mobile car valeting, driveway, patio, roof, and window cleaning in Bournemouth, Poole, Christchurch, and Dorset. Fully insured, DBS checked—book via WhatsApp for fast service!">
+  <meta name="keywords" content="mobile car valeting Bournemouth, driveway cleaning Poole, patio cleaning Christchurch, roof cleaning Dorset, window cleaning Bournemouth, mobile detailing Hampshire, pressure washing Wiltshire, car valeting Southampton, driveway cleaning Salisbury, property maintenance Dorset">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.jjspristineclean.co.uk/">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -47,6 +47,66 @@
   }
   </script>
   
+  <!-- Additional Service Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Mobile Car Valeting",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "JJS Pristine Clean"
+    },
+    "areaServed": ["Bournemouth", "Poole", "Christchurch", "Dorset"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Exterior Wash"
+          },
+          "price": "25",
+          "priceCurrency": "GBP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Interior Clean"
+          },
+          "price": "30",
+          "priceCurrency": "GBP"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Full Valet"
+          },
+          "price": "50",
+          "priceCurrency": "GBP"
+        }
+      ]
+    }
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Property Cleaning",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "JJS Pristine Clean"
+    },
+    "areaServed": ["Bournemouth", "Poole", "Christchurch", "Dorset"]
+  }
+  </script>
+  
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" as="style" onload="this.rel='stylesheet'">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
@@ -69,7 +129,7 @@
   <header class="sticky top-0 z-50 bg-white shadow-md">
     <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
       <a href="#home" class="flex items-center gap-4 group">
-        <svg class="w-12 h-12 text-blue-600 drop-shadow-md group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <svg class="w-12 h-12 text-blue-600 drop-shadow-md group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" alt="JJS Pristine Clean logo star icon">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
         </svg>
         <div class="leading-none">
@@ -80,6 +140,7 @@
   
       <nav class="hidden md:flex gap-8 text-sm font-semibold items-center">
         <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#services" class="hover:text-blue-600">Services</a>
         <a href="#membership" class="hover:text-blue-600">Memberships</a>
         <a href="#about" class="hover:text-blue-600">About</a>
         <a href="#why-choose-us" class="hover:text-blue-600">Why Choose Us</a>
@@ -105,6 +166,7 @@
       </div>
       <nav class="flex flex-col px-10 pt-20 pb-32 text-2xl font-bold space-y-10 text-center">
         <a href="#home" class="hover:text-blue-600 transition">Home</a>
+        <a href="#services" class="hover:text-blue-600 transition">Services</a>
         <a href="#membership" class="hover:text-blue-600 transition">Memberships</a>
         <a href="#about" class="hover:text-blue-600 transition">About Us</a>
         <a href="#why-choose-us" class="hover:text-blue-600 transition">Why Choose Us</a>
@@ -139,8 +201,8 @@
     <section id="about" class="my-20 text-center px-6">
       <h3 class="text-3xl md:text-4xl font-bold text-blue-800 mb-10">About JJS Pristine Clean</h3>
       <div class="bg-white p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100 text-left md:text-center">
-        <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6"><strong>We’re a trusted local cleaning company</strong> based right here in Bournemouth.</p>
-        <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">We specialise in <strong>mobile car valeting</strong> and <strong>professional property cleaning</strong> across Dorset and surrounding areas.</p>
+        <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6"><strong>We're a trusted local cleaning company</strong> based right here in Bournemouth.</p>
+        <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">We specialise in <strong>mobile car valeting</strong> and <strong>professional property cleaning</strong> across Dorset and surrounding areas. <a href="#services" class="text-blue-600 hover:underline">View our services</a>.</p>
         <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-6">Fully mobile – we come to YOU at home or work with everything needed. If the job is worth it, we are happy to travel further!</p>
         <p class="text-lg md:text-xl leading-relaxed text-gray-700 mb-8">Only premium products • Latest techniques • Showroom results every time.</p>
         <p class="text-xl md:text-2xl font-bold text-blue-800">Fully insured • DBS checked • 100% satisfaction guaranteed</p>
@@ -156,18 +218,21 @@
       </h3>
       <p class="text-center text-gray-600 mb-12">Premium mobile valeting at your door</p>
       <div class="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
-        <div class="bg-white p-8 rounded-2xl shadow-xl text-center border border-gray-100 flex flex-col justify-between h-96">
+        <div class="bg-white p-8 rounded-2xl shadow-xl text-center border border-gray-100 flex flex-col justify-between">
           <div><h4 class="text-2xl font-bold text-blue-800 mb-4">Exterior Wash</h4><p class="text-gray-700 text-sm leading-relaxed mb-8">Hand wash with premium shampoo, wheels & tyres cleaned + dressed, exterior glass polished.</p></div>
           <div class="space-y-5"><div><p class="text-4xl font-extrabold text-blue-700 leading-tight">£25</p><p class="text-base text-gray-600 mt-1">Small / medium car</p></div><div><p class="text-4xl font-extrabold text-blue-700 leading-tight">£35</p><p class="text-base text-gray-600 mt-1">SUV • 4×4 • Van</p></div></div>
+          <a href="#contact-page" class="mt-6 block bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-bold shadow-lg transition">Book Now</a>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-xl text-center border border-gray-100 flex flex-col justify-between h-96">
+        <div class="bg-white p-8 rounded-2xl shadow-xl text-center border border-gray-100 flex flex-col justify-between">
           <div><h4 class="text-2xl font-bold text-blue-800 mb-4">Interior Clean</h4><p class="text-gray-700 text-sm leading-relaxed mb-8">Full vacuum, plastics refreshed, mats cleaned, interior glass polished.</p></div>
           <div class="space-y-5"><div><p class="text-4xl font-extrabold text-blue-700 leading-tight">£30</p><p class="text-base text-gray-600 mt-1">Small / medium car</p></div><div><p class="text-4xl font-extrabold text-blue-700 leading-tight">£35</p><p class="text-base text-gray-600 mt-1">SUV • 4×4 • Van</p></div></div>
+          <a href="#contact-page" class="mt-6 block bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-bold shadow-lg transition">Book Now</a>
         </div>
-        <div class="bg-white p-8 rounded-2xl shadow-xl text-center border-4 border-blue-400 relative flex flex-col justify-between h-96">
+        <div class="bg-white p-8 rounded-2xl shadow-xl text-center border-4 border-blue-400 relative flex flex-col justify-between">
           <div class="absolute -top-4 left-1/2 -translate-x-1/2"><span class="bg-orange-500 text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg whitespace-nowrap">BEST VALUE</span></div>
           <div class="pt-6"><h4 class="text-2xl font-bold text-blue-800 mb-4">Full Valet</h4><p class="text-gray-700 text-sm leading-relaxed mb-8">Exterior wash + interior clean, with free wax protection.</p></div>
           <div class="space-y-5"><div><p class="text-4xl font-extrabold text-blue-700 leading-tight">£50</p><p class="text-base text-gray-600 mt-1">Small / medium car</p></div><div><p class="text-4xl font-extrabold text-blue-700 leading-tight">£60</p><p class="text-base text-gray-600 mt-1">SUV • 4×4 • Van</p></div></div>
+          <a href="#contact-page" class="mt-6 block bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-xl font-bold shadow-lg transition">Book Now</a>
         </div>
       </div>
       <p class="text-sm text-gray-600 mt-10 text-center">Free wax protection + priority booking on all services</p>
@@ -216,48 +281,42 @@
         </h3>
         <p class="text-center text-2xl font-semibold text-blue-900 mb-12">Keep your car showroom-ready — every month.</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          <div class="bg-white rounded-2xl shadow-xl p-8 text-center flex flex-col">
-            <div class="flex-1 flex flex-col justify-between">
-              <div>
-                <h4 class="text-xl font-bold text-blue-800 mb-6">Exterior Only</h4>
-                <div class="space-y-10">
-                  <div><p class="text-5xl font-bold text-blue-700">£44.<span class="text-3xl">99</span></p><p class="text-gray-600 text-lg mt-2">Small / Medium Car</p>
-                    <a href="https://buy.stripe.com/fZu3cxcyH0ii9GmaQw8AE03" class="block mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-5 rounded-xl font-bold text-xl shadow-lg transition-all">Join Now</a></div>
-                  <div><p class="text-5xl font-bold text-blue-700">£64.<span class="text-3xl">99</span></p><p class="text-gray-600 text-lg mt-2">SUV • 4×4 • Van</p>
-                    <a href="https://buy.stripe.com/fZu7sN2Y78OO7yee2I8AE04" class="block mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-5 rounded-xl font-bold text-xl shadow-lg transition-all">Join Now</a></div>
-                </div>
-                <p class="text-sm text-gray-500 italic mt-10">2 cleans per month</p>
+          <div class="bg-white rounded-2xl shadow-xl p-8 text-center flex flex-col justify-between">
+            <div>
+              <h4 class="text-xl font-bold text-blue-800 mb-6">Exterior Only</h4>
+              <div class="space-y-10">
+                <div><p class="text-5xl font-bold text-blue-700">£44.<span class="text-3xl">99</span></p><p class="text-gray-600 text-lg mt-2">Small / Medium Car</p>
+                  <a href="https://buy.stripe.com/fZu3cxcyH0ii9GmaQw8AE03" class="block mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-5 rounded-xl font-bold text-xl shadow-lg transition-all">Join Now</a></div>
+                <div><p class="text-5xl font-bold text-blue-700">£64.<span class="text-3xl">99</span></p><p class="text-gray-600 text-lg mt-2">SUV • 4×4 • Van</p>
+                  <a href="https://buy.stripe.com/fZu7sN2Y78OO7yee2I8AE04" class="block mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-5 rounded-xl font-bold text-xl shadow-lg transition-all">Join Now</a></div>
               </div>
+              <p class="text-sm text-gray-500 italic mt-10">2 cleans per month</p>
             </div>
           </div>
-          <div class="bg-white rounded-2xl shadow-2xl p-8 text-center border-4 border-blue-500 relative flex flex-col">
+          <div class="bg-white rounded-2xl shadow-2xl p-8 text-center border-4 border-blue-500 relative flex flex-col justify-between">
             <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-red-500 text-white px-4 py-1 rounded-full text-sm font-bold">MOST POPULAR</span>
-            <div class="flex-1 flex flex-col justify-between">
-              <div>
-                <h4 class="text-xl font-bold text-blue-800 mb-6">Full Valet</h4>
-                <div class="space-y-10">
-                  <div><p class="text-5xl font-bold text-blue-700">£74.<span class="text-3xl">99</span></p><p class="text-gray-600 text-lg mt-2">Small / Medium Car</p>
-                    <a href="https://buy.stripe.com/cNi7sNbuD2qqdWC4s88AE05" class="block mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-5 rounded-xl font-bold text-xl shadow-lg transition-all">Join Now</a></div>
-                  <div><p class="text-5xl font-bold text-blue-700">£99.<span class="text-3xl">99</span></p><p class="text-gray-600 text-lg mt-2">SUV • 4×4 • Van</p>
-                    <a href="https://buy.stripe.com/eVq9AVdCLfdc3hY0bS8AE06" class="block mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-5 rounded-xl font-bold text-xl shadow-lg transition-all">Join Now</a></div>
-                </div>
-                <p class="text-sm text-gray-500 italic mt-10">2 cleans per month</p>
+            <div>
+              <h4 class="text-xl font-bold text-blue-800 mb-6">Full Valet</h4>
+              <div class="space-y-10">
+                <div><p class="text-5xl font-bold text-blue-700">£74.<span class="text-3xl">99</span></p><p class="text-gray-600 text-lg mt-2">Small / Medium Car</p>
+                  <a href="https://buy.stripe.com/cNi7sNbuD2qqdWC4s88AE05" class="block mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-5 rounded-xl font-bold text-xl shadow-lg transition-all">Join Now</a></div>
+                <div><p class="text-5xl font-bold text-blue-700">£99.<span class="text-3xl">99</span></p><p class="text-gray-600 text-lg mt-2">SUV • 4×4 • Van</p>
+                  <a href="https://buy.stripe.com/eVq9AVdCLfdc3hY0bS8AE06" class="block mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-5 rounded-xl font-bold text-xl shadow-lg transition-all">Join Now</a></div>
               </div>
+              <p class="text-sm text-gray-500 italic mt-10">2 cleans per month</p>
             </div>
           </div>
-          <div class="bg-white rounded-2xl shadow-2xl p-8 text-center border-4 border-purple-600 relative flex flex-col">
+          <div class="bg-white rounded-2xl shadow-2xl p-8 text-center border-4 border-purple-600 relative flex flex-col justify-between">
             <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-purple-600 to-pink-600 text-white px-5 py-1 rounded-full text-sm font-bold shadow-lg">PREMIUM</span>
-            <div class="flex-1 flex flex-col justify-between">
-              <div>
-                <h4 class="text-xl font-bold text-blue-800 mb-6">Elite Full Valet Weekly</h4>
-                <div class="space-y-10">
-                  <div><p class="text-5xl font-bold text-blue-700">£159.<span class="text-3xl">99</span></p><p class="text-gray-600 text-lg mt-2">Small / Medium Car</p>
-                    <a href="https://buy.stripe.com/aFabJ32Y79SSbOu9Ms8AE07" class="block mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-5 rounded-xl font-bold text-xl shadow-lg transition-all">Join Now</a></div>
-                  <div><p class="text-5xl font-bold text-blue-700">£199.<span class="text-3xl">99</span></p><p class="text-gray-600 text-lg mt-2">SUV • 4×4 • Van</p>
-                    <a href="https://buy.stripe.com/dRm6oJdCL3uu19Q0bS8AE08" class="block mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-5 rounded-xl font-bold text-xl shadow-lg transition-all">Join Now</a></div>
-                </div>
-                <p class="text-sm text-gray-500 italic mt-10 font-medium">1 clean every week</p>
+            <div>
+              <h4 class="text-xl font-bold text-blue-800 mb-6">Elite Full Valet Weekly</h4>
+              <div class="space-y-10">
+                <div><p class="text-5xl font-bold text-blue-700">£159.<span class="text-3xl">99</span></p><p class="text-gray-600 text-lg mt-2">Small / Medium Car</p>
+                  <a href="https://buy.stripe.com/aFabJ32Y79SSbOu9Ms8AE07" class="block mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-5 rounded-xl font-bold text-xl shadow-lg transition-all">Join Now</a></div>
+                <div><p class="text-5xl font-bold text-blue-700">£199.<span class="text-3xl">99</span></p><p class="text-gray-600 text-lg mt-2">SUV • 4×4 • Van</p>
+                  <a href="https://buy.stripe.com/dRm6oJdCL3uu19Q0bS8AE08" class="block mt-5 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-5 rounded-xl font-bold text-xl shadow-lg transition-all">Join Now</a></div>
               </div>
+              <p class="text-sm text-gray-500 italic mt-10 font-medium">1 clean every week</p>
             </div>
           </div>
         </div>
@@ -307,7 +366,7 @@
         <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow text-center border border-gray-100">
           <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 L16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/>
             </svg>
           </div>
           <h4 class="text-xl font-bold text-blue-800 mb-4">Premium Products & Techniques</h4>
@@ -324,22 +383,22 @@
           <p class="text-gray-700 text-sm leading-relaxed">Serving Dorset and surrounding areas with a proven reputation for excellence and reliability.</p>
         </div>
       </div>
-
+    
       <!-- TRUSTPILOT REVIEWS UNDER WHY CHOOSE US -->
       <div class="mt-12">
         <h3 class="text-3xl font-bold text-center text-blue-800 mb-8">Our Trustpilot Reviews</h3>
         <p class="text-center text-2xl font-bold text-green-600 mb-6">TrustScore 3.8 | Great | 2 Reviews</p>
         <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          <div class="bg-white p-8 rounded-2xl shadow-xl">
+          <blockquote class="bg-white p-8 rounded-2xl shadow-xl">
             <div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div>
             <p class="text-gray-700 italic">"Cleaned my car and did a really good job. Comms from Sam before and on the day were excellent, they turned up on time with all the kit they needed and were professional."</p>
             <p class="mt-4 font-semibold">— 14 January 2026</p>
-          </div>
-          <div class="bg-white p-8 rounded-2xl shadow-xl">
+          </blockquote>
+          <blockquote class="bg-white p-8 rounded-2xl shadow-xl">
             <div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div>
             <p class="text-gray-700 italic">"Super impressed with this service. Arranged a convenient time for them to come to our home and clean our cars, immaculately and efficiently. Polite, prompt and great communication."</p>
             <p class="mt-4 font-semibold">— 6 January 2026</p>
-          </div>
+          </blockquote>
         </div>
         <p class="text-center mt-8"><a href="https://uk.trustpilot.com/review/jjspristineclean.co.uk" target="_blank" rel="noopener" class="text-blue-600 font-bold hover:underline">See more on Trustpilot</a></p>
       </div>
@@ -349,12 +408,12 @@
     <section class="my-20 bg-blue-50 py-16 rounded-3xl">
       <h3 class="text-4xl font-bold text-center text-blue-800 mb-12">What Our Customers Say</h3>
       <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto px-6">
-        <div class="bg-white p-8 rounded-2xl shadow-xl"><div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div><p class="text-gray-700 italic">"Best valet I’ve ever had! My car looks brand new every time."</p><p class="mt-4 font-semibold">— Sarah T., Bournemouth</p></div>
-        <div class="bg-white p-8 rounded-2xl shadow-xl"><div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div><p class="text-gray-700 italic">"Driveway looks incredible after years of moss. Super professional."</p><p class="mt-4 font-semibold">— Mark & Lisa, Poole</p></div>
-        <div class="bg-white p-8 rounded-2xl shadow-xl"><div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div><p class="text-gray-700 italic">"Full valet membership is a game-changer. Car stays spotless!"</p><p class="mt-4 font-semibold">— James R., Christchurch</p></div>
-        <div class="bg-white p-8 rounded-2xl shadow-xl"><div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div><p class="text-gray-700 italic">"Roof and gutters cleaned perfectly. No mess, no stress."</p><p class="mt-4 font-semibold">— Emma L., Ringwood</p></div>
-        <div class="bg-white p-8 rounded-2xl shadow-xl"><div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div><p class="text-gray-700 italic">"Quick response on WhatsApp and came the same day. Brilliant!"</p><p class="mt-4 font-semibold">— David K., Westbourne</p></div>
-        <div class="bg-white p-8 rounded-2xl shadow-xl"><div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div><p class="text-gray-700 italic">"Patio looks like new again! Amazing attention to detail."</p><p class="mt-4 font-semibold">— Rachel P., Southbourne</p></div>
+        <blockquote class="bg-white p-8 rounded-2xl shadow-xl"><div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div><p class="text-gray-700 italic">"Best valet I’ve ever had! My car looks brand new every time."</p><p class="mt-4 font-semibold">— Sarah T., Bournemouth</p></blockquote>
+        <blockquote class="bg-white p-8 rounded-2xl shadow-xl"><div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div><p class="text-gray-700 italic">"Driveway looks incredible after years of moss. Super professional."</p><p class="mt-4 font-semibold">— Mark & Lisa, Poole</p></blockquote>
+        <blockquote class="bg-white p-8 rounded-2xl shadow-xl"><div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div><p class="text-gray-700 italic">"Full valet membership is a game-changer. Car stays spotless!"</p><p class="mt-4 font-semibold">— James R., Christchurch</p></blockquote>
+        <blockquote class="bg-white p-8 rounded-2xl shadow-xl"><div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div><p class="text-gray-700 italic">"Roof and gutters cleaned perfectly. No mess, no stress."</p><p class="mt-4 font-semibold">— Emma L., Ringwood</p></blockquote>
+        <blockquote class="bg-white p-8 rounded-2xl shadow-xl"><div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div><p class="text-gray-700 italic">"Quick response on WhatsApp and came the same day. Brilliant!"</p><p class="mt-4 font-semibold">— David K., Westbourne</p></blockquote>
+        <blockquote class="bg-white p-8 rounded-2xl shadow-xl"><div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div><p class="text-gray-700 italic">"Patio looks like new again! Amazing attention to detail."</p><p class="mt-4 font-semibold">— Rachel P., Southbourne</p></blockquote>
       </div>
     </section>
   
@@ -363,14 +422,22 @@
       <h3 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">Our Cleaning Videos</h3>
       <p class="text-center text-gray-600 mb-8">Watch our team in action! Check out before-and-after transformations and tips for keeping your car and property pristine.</p>
       <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
-        <!-- Your Video Embed -->
+        <!-- Video 1: Porsche Taycan Clean -->
         <div class="bg-white p-4 rounded-2xl shadow-xl">
-          <video width="100%" height="315" controls>
-            <source src="https://www.dropbox.com/scl/fo/ag5sfx8vgt6w5rnnt8ojq/AO-iwEHzNk2-bha5qKt7_Jg/V2%20JJS%20PRISTINE%20CLEAN.mp4?rlkey=dl3lh835ws2jl1a08kscjt0po&st=hb0nqpgw&raw=1" type="video/mp4">
+          <video width="100%" height="315" controls loading="lazy">
+            <source src="https://www.dropbox.com/scl/fo/ag5sfx8vgt6w5rnnt8ojq/AKwi9C_cbaxEJf-f-kcjgjk/PORSCHE%20TAYCAN/V2%20JJS%20PRISTINE%20CLEAN.mp4?rlkey=dl3lh835ws2jl1a08kscjt0po&raw=1" type="video/mp4">
             Your browser does not support the video tag.
           </video>
+          <p class="text-center text-gray-600 mt-4">Porsche Taycan Clean</p>
         </div>
-        <!-- Add more <div> blocks here for future videos -->
+        <!-- Video 2: Porsche 911 Clean -->
+        <div class="bg-white p-4 rounded-2xl shadow-xl">
+          <video width="100%" height="315" controls loading="lazy">
+            <source src="https://www.dropbox.com/scl/fo/ag5sfx8vgt6w5rnnt8ojq/AHMS0hsdQyPOYJnr5GqRlOI/PORSCHE%20911/911%20JJS%20PRISTINE%20CLEAN.mp4?rlkey=dl3lh835ws2jl1a08kscjt0po&raw=1" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <p class="text-center text-gray-600 mt-4">Porsche 911 Clean</p>
+        </div>
       </div>
       <p class="text-center mt-8 text-gray-600">More videos coming soon!</p>
     </section>
@@ -384,9 +451,9 @@
         <p class="text-xl font-semibold">Call / Text: <a href="tel:07923613796" class="text-blue-600">07923 613796</a></p>
         <p class="text-xl font-semibold">Email: <a href="mailto:info@jjspristineclean.co.uk" class="text-blue-600">info@jjspristineclean.co.uk</a></p>
         <div class="mt-8 mb-6 flex justify-center gap-5">
-          <a href="https://instagram.com/jjspristineclean" target="_blank" rel="noopener" class="hover:scale-110 transition"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram" loading="lazy" class="w-14 h-14"></a>
-          <a href="https://www.facebook.com/share/1GxMU78RXU/?mibextid=wwXlfr" target="_blank" rel="noopener" class="hover:scale-110 transition"><svg class="w-14 h-14 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-          <a href="https://www.tiktok.com/@jjspristineclean" target="_blank" rel="noopener" class="hover:scale-110 transition"><svg class="w-14 h-14 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M19.58 6.79a4.7 4.7 0 01-3.38-4.71h-3.9v12.52a2.86 2.86 0 01-2.86 2.86 2.86 2.86 0 01-2.86-2.86 2.86 2.86 0 012.86-2.86h.48v-3.9a6.76 6.76 0 00-4.78 6.76 6.76 6.76 0 006.76 6.76 6.76 6.76 0 006.76-6.76V9.63a8.6 8.6 0 005.02 1.56V6.79z"/></svg></a>
+          <a href="https://instagram.com/jjspristineclean" target="_blank" rel="noopener" class="hover:scale-110 transition" aria-label="Follow us on Instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram logo" loading="lazy" class="w-14 h-14"></a>
+          <a href="https://www.facebook.com/share/1GxMU78RXU/?mibextid=wwXlfr" target="_blank" rel="noopener" class="hover:scale-110 transition" aria-label="Follow us on Facebook"><svg class="w-14 h-14 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.tiktok.com/@jjspristineclean" target="_blank" rel="noopener" class="hover:scale-110 transition" aria-label="Follow us on TikTok"><svg class="w-14 h-14 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M19.58 6.79a4.7 4.7 0 01-3.38-4.71h-3.9v12.52a2.86 2.86 0 01-2.86 2.86 2.86 2.86 0 01-2.86-2.86 2.86 2.86 0 012.86-2.86h.48v-3.9a6.76 6.76 0 00-4.78 6.76 6.76 6.76 0 006.76 6.76 6.76 6.76 0 006.76-6.76V9.63a8.6 8.6 0 005.02 1.56V6.79z"/></svg></a>
         </div>
       </div>
     </section>
@@ -404,7 +471,7 @@
           <li><a href="#why-choose-us" class="hover:text-cyan-400 transition">Why Choose Us</a></li>
           <li><a href="#contact-page" class="hover:text-cyan-400 transition">Contact</a></li>
         </ul></div>
-        <div class="text-center md:text-right"><p class="text-sm text-slate-400">© 2026 JJS Pristine Clean<br>Fully Insured • DBS Checked</p></div>
+        <div class="text-center md:text-right"><p class="text-sm text-slate-400">© <span id="year">2026</span> JJS Pristine Clean<br>Fully Insured • DBS Checked</p></div>
       </div>
       <div class="border-t border-slate-800 mt-8 pt-6 text-center text-xs text-slate-500">Designed & built with love in Bournemouth</div>
     </div>
@@ -412,7 +479,7 @@
   
   <!-- FLOATING WHATSAPP -->
   <a href="https://wa.me/447923613796?text=Hi! I'd like to book a clean" target="_blank" rel="noopener"
-     class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full p-5 shadow-2xl transition transform hover:scale-110">
+    class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full p-5 shadow-2xl transition transform hover:scale-110">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat with us on WhatsApp" loading="lazy" class="w-10 h-10">
   </a>
   
@@ -427,6 +494,8 @@
     navLinks.forEach(link => {
       link.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
     });
+    // Auto-update year
+    document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
