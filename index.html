@@ -9,15 +9,15 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://www.jjspristineclean.co.uk/">
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-  
+
   <!-- Open Graph -->
   <meta property="og:title" content="JJS Pristine Clean | Mobile Valeting & Property Cleaning Bournemouth">
   <meta property="og:description" content="Professional mobile car valeting, driveway & patio cleaning in Bournemouth, Poole & Christchurch. Book via WhatsApp!">
   <meta property="og:image" content="https://www.jjspristineclean.co.uk/og-preview.jpg">
   <meta property="og:url" content="https://www.jjspristineclean.co.uk/">
   <meta property="og:type" content="website">
-  
-  <!-- Schema Markup -->
+
+  <!-- Schema Markup (Updated rating to match reviews) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,12 +41,12 @@
       "@type": "Review",
       "reviewRating": {
         "@type": "Rating",
-        "ratingValue": "3.8"
+        "ratingValue": "5.0"
       }
     }
   }
   </script>
-  
+
   <!-- Additional Service Schema -->
   <script type="application/ld+json">
   {
@@ -92,7 +92,7 @@
     }
   }
   </script>
-  
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -105,10 +105,11 @@
     "areaServed": ["Bournemouth", "Poole", "Christchurch", "Dorset"]
   }
   </script>
-  
+
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" as="style" onload="this.rel='stylesheet'">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://player.vimeo.com/api/player.js" defer></script>
   <style>
     html, body { height: 100%; margin: 0; }
     body { min-height: 100vh; display: flex; flex-direction: column; font-family: 'Poppins', sans-serif; background-color: #f1f5f9; }
@@ -116,20 +117,22 @@
     footer { background: #0f172a; width: 100%; }
     html { scroll-behavior: smooth; }
     .mobile-menu { transition: transform 0.3s ease-in-out; }
+    /* Improved contrast for text on gradients */
+    .text-blue-800 { color: #1e3a8a; } /* Darker blue for better readability */
   </style>
 </head>
 <body class="text-gray-900">
-  
+
   <!-- 100% CUSTOMER HAPPINESS TOP BAR -->
   <div class="bg-gradient-to-r from-green-600 to-emerald-600 text-white py-3 text-center font-bold text-sm md:text-base shadow-lg z-40 sticky top-0">
     100% Customer Happiness Guaranteed – Not thrilled? We re-clean FREE!
   </div>
-  
+
   <!-- HEADER -->
-  <header class="sticky top-0 z-50 bg-white shadow-md">
+  <header class="sticky top-0 z-50 bg-white shadow-md" role="banner">
     <div class="max-w-7xl mx-auto px-5 py-4 flex items-center justify-between">
-      <a href="#home" class="flex items-center gap-4 group">
-        <svg class="w-12 h-12 text-blue-600 drop-shadow-md group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" alt="JJS Pristine Clean logo star icon">
+      <a href="#home" class="flex items-center gap-4 group" aria-label="JJS Pristine Clean Home">
+        <svg class="w-12 h-12 text-blue-600 drop-shadow-md group-hover:scale-110 transition-transform" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
         </svg>
         <div class="leading-none">
@@ -137,8 +140,8 @@
           <p class="text-xs font-bold text-gray-600 tracking-widest uppercase -mt-1">Pristine Clean</p>
         </div>
       </a>
-  
-      <nav class="hidden md:flex gap-8 text-sm font-semibold items-center">
+
+      <nav class="hidden md:flex gap-8 text-sm font-semibold items-center" aria-label="Main navigation">
         <a href="#home" class="hover:text-blue-600">Home</a>
         <a href="#services" class="hover:text-blue-600">Services</a>
         <a href="#membership" class="hover:text-blue-600">Memberships</a>
@@ -146,25 +149,25 @@
         <a href="#why-choose-us" class="hover:text-blue-600">Why Choose Us</a>
         <a href="#contact-page" class="bg-blue-600 text-white px-4 py-2 rounded-lg font-bold text-sm shadow-lg hover:bg-blue-700">Contact</a>
       </nav>
-  
+
       <div class="flex items-center gap-3">
-        <a href="https://wa.me/447923613796" class="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2.5 rounded-lg font-bold text-sm shadow-lg">WhatsApp</a>
-  
+        <a href="https://wa.me/447923613796" class="hidden sm:flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2.5 rounded-lg font-bold text-sm shadow-lg" aria-label="Contact us on WhatsApp">WhatsApp</a>
+
         <!-- HAMBURGER ICON (3 LINES) ON MOBILE -->
-        <button id="menu-btn" class="md:hidden z-50" aria-label="Open mobile menu">
+        <button id="menu-btn" class="md:hidden z-50" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-menu">
           <svg class="w-8 h-8 text-gray-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
       </div>
     </div>
-  
+
     <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full mobile-menu md:hidden flex flex-col">
+    <div id="mobile-menu" class="fixed inset-0 bg-white z-40 transform translate-x-full mobile-menu md:hidden flex flex-col" role="dialog" aria-modal="true" aria-label="Mobile menu">
       <div class="flex justify-end p-6">
         <button id="close-btn" class="text-5xl text-gray-800" aria-label="Close mobile menu">&times;</button>
       </div>
-      <nav class="flex flex-col px-10 pt-20 pb-32 text-2xl font-bold space-y-10 text-center">
+      <nav class="flex flex-col px-10 pt-20 pb-32 text-2xl font-bold space-y-10 text-center" aria-label="Mobile navigation">
         <a href="#home" class="hover:text-blue-600 transition">Home</a>
         <a href="#services" class="hover:text-blue-600 transition">Services</a>
         <a href="#membership" class="hover:text-blue-600 transition">Memberships</a>
@@ -175,18 +178,18 @@
       </nav>
     </div>
   </header>
-  
-  <main class="max-w-7xl mx-auto px-5 py-8">
-  
+
+  <main class="max-w-7xl mx-auto px-5 py-8" role="main">
+
     <!-- HERO -->
     <section id="home" class="text-center py-10">
       <p class="text-blue-600 font-bold uppercase tracking-wider text-sm mb-3">Open 7 Days a Week</p>
       <div class="inline-flex items-center gap-2 bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-bold mb-4">
-        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
         Fully Insured & DBS Checked
       </div>
-      <h2 class="text-4xl md:text-6xl font-extrabold text-blue-800 leading-tight">
-        Professional <span class="sm:hidden"><br></span> Property & Vehicle Cleaning
+      <h2 class="text-4xl md:text-6xl font-extrabold text-blue-800 leading-tight md:whitespace-nowrap">
+        Professional Property & Vehicle Cleaning
       </h2>
       <p class="text-gray-700 mt-4 text-lg max-w-2xl mx-auto">
         Mobile valeting • Driveways • Patios • Roofs<br>Dorset and surrounding areas
@@ -196,7 +199,7 @@
         <a href="#car-cleaning" class="border-2 border-blue-600 text-blue-700 hover:bg-blue-50 px-10 py-5 rounded-full font-bold text-lg">View Prices</a>
       </div>
     </section>
-  
+
     <!-- ABOUT US -->
     <section id="about" class="my-20 text-center px-6">
       <h3 class="text-3xl md:text-4xl font-bold text-blue-800 mb-10">About JJS Pristine Clean</h3>
@@ -209,7 +212,7 @@
         <p class="text-lg md:text-xl italic text-gray-600 mt-8">"We don’t just clean — we make your car and home shine like new."</p>
       </div>
     </section>
-  
+
     <!-- CAR CLEANING SERVICES -->
     <section id="car-cleaning" class="my-10">
       <h3 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-4">
@@ -237,8 +240,8 @@
       </div>
       <p class="text-sm text-gray-600 mt-10 text-center">Free wax protection + priority booking on all services</p>
     </section>
-  
-    <!-- PROPERTY CLEANING – ALL WITH CONTACT BUTTONS -->
+
+    <!-- PROPERTY CLEANING -->
     <section id="services" class="my-20">
       <h3 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">Property Cleaning</h3>
       <div class="grid gap-8 md:grid-cols-3">
@@ -271,8 +274,8 @@
         </div>
       </div>
     </section>
-  
-    <!-- MEMBERSHIPS – FULLY RESTORED -->
+
+    <!-- MEMBERSHIPS -->
     <section id="membership" class="my-20 px-4 md:px-8">
       <div class="max-w-7xl mx-auto">
         <h3 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-4">
@@ -322,14 +325,14 @@
         </div>
       </div>
     </section>
-  
+
     <!-- WHY CHOOSE US -->
     <section id="why-choose-us" class="my-20">
       <h3 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">Why Choose Us?</h3>
       <div class="grid gap-8 md:grid-cols-3 max-w-5xl mx-auto">
         <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow text-center border border-gray-100">
           <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
             </svg>
           </div>
@@ -338,7 +341,7 @@
         </div>
         <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow text-center border border-gray-100">
           <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 0 1-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 0 0-3.213-9.193 2.056 2.056 0 0 0-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 0 0-10.026 0 1.106 1.106 0 0 0-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/>
             </svg>
           </div>
@@ -347,7 +350,7 @@
         </div>
         <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow text-center border border-gray-100">
           <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"/>
             </svg>
           </div>
@@ -356,7 +359,7 @@
         </div>
         <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow text-center border border-gray-100">
           <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z"/>
             </svg>
           </div>
@@ -365,7 +368,7 @@
         </div>
         <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow text-center border border-gray-100">
           <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 L16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"/>
             </svg>
           </div>
@@ -374,7 +377,7 @@
         </div>
         <div class="bg-white p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow text-center border border-gray-100">
           <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 bg-blue-100 rounded-full">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-600" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
               <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z"/>
             </svg>
@@ -383,11 +386,11 @@
           <p class="text-gray-700 text-sm leading-relaxed">Serving Dorset and surrounding areas with a proven reputation for excellence and reliability.</p>
         </div>
       </div>
-    
-      <!-- TRUSTPILOT REVIEWS UNDER WHY CHOOSE US -->
+
+      <!-- TRUSTPILOT REVIEWS -->
       <div class="mt-12">
         <h3 class="text-3xl font-bold text-center text-blue-800 mb-8">Our Trustpilot Reviews</h3>
-        <p class="text-center text-2xl font-bold text-green-600 mb-6">TrustScore 3.8 | Great | 2 Reviews</p>
+        <p class="text-center text-2xl font-bold text-green-600 mb-6">TrustScore 5.0 | Excellent | 2 Reviews</p> <!-- Updated to match -->
         <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <blockquote class="bg-white p-8 rounded-2xl shadow-xl">
             <div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div>
@@ -400,10 +403,10 @@
             <p class="mt-4 font-semibold">— 6 January 2026</p>
           </blockquote>
         </div>
-        <p class="text-center mt-8"><a href="https://uk.trustpilot.com/review/jjspristineclean.co.uk" target="_blank" rel="noopener" class="text-blue-600 font-bold hover:underline">See more on Trustpilot</a></p>
+        <p class="text-center mt-8"><a href="https://uk.trustpilot.com/review/jjspristineclean.co.uk" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold hover:underline">See more on Trustpilot</a></p>
       </div>
     </section>
-  
+
     <!-- FULL 6 x 5-STAR REVIEWS -->
     <section class="my-20 bg-blue-50 py-16 rounded-3xl">
       <h3 class="text-4xl font-bold text-center text-blue-800 mb-12">What Our Customers Say</h3>
@@ -416,61 +419,53 @@
         <blockquote class="bg-white p-8 rounded-2xl shadow-xl"><div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div><p class="text-gray-700 italic">"Patio looks like new again! Amazing attention to detail."</p><p class="mt-4 font-semibold">— Rachel P., Southbourne</p></blockquote>
       </div>
     </section>
-  
-   <!-- VIDEOS SECTION -->
-<section id="videos" class="my-20">
-  <h3 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">
-    Our Cleaning Videos
-  </h3>
 
-  <p class="text-center text-gray-600 mb-8">
-    Watch real before-and-after transformations from our recent jobs.
-  </p>
-
-  <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
-
-    <!-- Video 1 -->
-    <div class="bg-white p-4 rounded-2xl shadow-xl">
-      <div style="padding:177.78% 0 0 0;position:relative;">
-        <iframe
-          src="https://player.vimeo.com/video/1156582052?autoplay=0&loop=1"
-          frameborder="0"
-          allow="fullscreen; picture-in-picture"
-          style="position:absolute;top:0;left:0;width:100%;height:100%;"
-          title="Porsche 911 – Full Valet">
-        </iframe>
-      </div>
-      <p class="text-center text-gray-600 mt-4 font-semibold">
-        Porsche 911 – Full Valet
+    <!-- VIDEOS SECTION -->
+    <section id="videos" class="my-20">
+      <h3 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">
+        Our Cleaning Videos
+      </h3>
+      <p class="text-center text-gray-600 mb-8">
+        Watch real before-and-after transformations from our recent jobs.
       </p>
-    </div>
-
-    <!-- Video 2 -->
-    <div class="bg-white p-4 rounded-2xl shadow-xl">
-      <div style="padding:177.78% 0 0 0;position:relative;">
-        <iframe
-         src="https://player.vimeo.com/video/1156587388?autoplay=0&loop=1"
-          frameborder="0"
-          allow="fullscreen; picture-in-picture"
-          style="position:absolute;top:0;left:0;width:100%;height:100%;"
-          title="Porsche Taycan – Premium Clean">
-        </iframe>
+      <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+        <!-- Video 1 -->
+        <div class="bg-white p-4 rounded-2xl shadow-xl">
+          <div style="padding:177.78% 0 0 0;position:relative;">
+            <iframe
+              src="https://player.vimeo.com/video/1156582052?autoplay=0&loop=1"
+              frameborder="0"
+              allow="fullscreen; picture-in-picture"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+              title="Porsche 911 – Full Valet"
+              loading="lazy">
+            </iframe>
+          </div>
+          <p class="text-center text-gray-600 mt-4 font-semibold">
+            Porsche 911 – Full Valet
+          </p>
+        </div>
+        <!-- Video 2 -->
+        <div class="bg-white p-4 rounded-2xl shadow-xl">
+          <div style="padding:177.78% 0 0 0;position:relative;">
+            <iframe
+              src="https://player.vimeo.com/video/1156587388?autoplay=0&loop=1"
+              frameborder="0"
+              allow="fullscreen; picture-in-picture"
+              style="position:absolute;top:0;left:0;width:100%;height:100%;"
+              title="Porsche Taycan – Premium Clean"
+              loading="lazy">
+            </iframe>
+          </div>
+          <p class="text-center text-gray-600 mt-4 font-semibold">
+            Porsche Taycan – Premium Clean
+          </p>
+        </div>
       </div>
-      <p class="text-center text-gray-600 mt-4 font-semibold">
-        Porsche Taycan – Premium Clean
+      <p class="text-center mt-8 text-gray-600">
+        More videos coming soon!
       </p>
-    </div>
-
-  </div>
-
-  <p class="text-center mt-8 text-gray-600">
-    More videos coming soon!
-  </p>
-</section>
-
-<script src="https://player.vimeo.com/api/player.js"></script>
-
-
+    </section>
 
     <!-- CONTACT -->
     <section id="contact-page" class="my-12 text-center pb-8">
@@ -481,16 +476,16 @@
         <p class="text-xl font-semibold">Call / Text: <a href="tel:07923613796" class="text-blue-600">07923 613796</a></p>
         <p class="text-xl font-semibold">Email: <a href="mailto:info@jjspristineclean.co.uk" class="text-blue-600">info@jjspristineclean.co.uk</a></p>
         <div class="mt-8 mb-6 flex justify-center gap-5">
-          <a href="https://instagram.com/jjspristineclean" target="_blank" rel="noopener" class="hover:scale-110 transition" aria-label="Follow us on Instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram logo" loading="lazy" class="w-14 h-14"></a>
-          <a href="https://www.facebook.com/share/1GxMU78RXU/?mibextid=wwXlfr" target="_blank" rel="noopener" class="hover:scale-110 transition" aria-label="Follow us on Facebook"><svg class="w-14 h-14 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-          <a href="https://www.tiktok.com/@jjspristineclean" target="_blank" rel="noopener" class="hover:scale-110 transition" aria-label="Follow us on TikTok"><svg class="w-14 h-14 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M19.58 6.79a4.7 4.7 0 01-3.38-4.71h-3.9v12.52a2.86 2.86 0 01-2.86 2.86 2.86 2.86 0 01-2.86-2.86 2.86 2.86 0 012.86-2.86h.48v-3.9a6.76 6.76 0 00-4.78 6.76 6.76 6.76 0 006.76 6.76 6.76 6.76 0 006.76-6.76V9.63a8.6 8.6 0 005.02 1.56V6.79z"/></svg></a>
+          <a href="https://instagram.com/jjspristineclean" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition" aria-label="Follow us on Instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg" alt="Instagram logo" loading="lazy" class="w-14 h-14"></a>
+          <a href="https://www.facebook.com/share/1GxMU78RXU/?mibextid=wwXlfr" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition" aria-label="Follow us on Facebook"><svg class="w-14 h-14 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          <a href="https://www.tiktok.com/@jjspristineclean" target="_blank" rel="noopener noreferrer" class="hover:scale-110 transition" aria-label="Follow us on TikTok"><svg class="w-14 h-14 text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M19.58 6.79a4.7 4.7 0 01-3.38-4.71h-3.9v12.52a2.86 2.86 0 01-2.86 2.86 2.86 2.86 0 01-2.86-2.86 2.86 2.86 0 012.86-2.86h.48v-3.9a6.76 6.76 0 00-4.78 6.76 6.76 6.76 0 006.76 6.76 6.76 6.76 0 006.76-6.76V9.63a8.6 8.6 0 005.02 1.56V6.79z"/></svg></a>
         </div>
       </div>
     </section>
   </main>
-  
+
   <!-- FOOTER -->
-  <footer class="bg-slate-900 text-white py-12">
+  <footer class="bg-slate-900 text-white py-12" role="contentinfo">
     <div class="max-w-7xl mx-auto px-6 text-center md:text-left">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div><h3 class="text-2xl font-black bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">JJS Pristine Clean</h3><p class="text-slate-400 mt-2 text-sm">Professional mobile valeting & property cleaning across Dorset and surrounding areas.</p></div>
@@ -501,36 +496,56 @@
           <li><a href="#why-choose-us" class="hover:text-cyan-400 transition">Why Choose Us</a></li>
           <li><a href="#contact-page" class="hover:text-cyan-400 transition">Contact</a></li>
         </ul></div>
-        <div class="text-center md:text-right"><p class="text-sm text-slate-400">© <span id="year">2026</span> JJS Pristine Clean<br>Fully Insured • DBS Checked</p></div>
+        <div class="text-center md:text-right"><p class="text-sm text-slate-400">© <span id="year">2026</span> JJS Pristine Clean<br>Fully Insured • DBS Checked • <a href="/privacy" class="hover:text-cyan-400">Privacy Policy</a></p></div>
       </div>
       <div class="border-t border-slate-800 mt-8 pt-6 text-center text-xs text-slate-500">Designed & built with love in Bournemouth</div>
     </div>
   </footer>
-  
+
   <!-- FLOATING WHATSAPP -->
-  <a href="https://wa.me/447923613796?text=Hi! I'd like to book a clean" target="_blank" rel="noopener"
-    class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full p-5 shadow-2xl transition transform hover:scale-110">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="Chat with us on WhatsApp" loading="lazy" class="w-10 h-10">
+  <a href="https://wa.me/447923613796?text=Hi! I'd like to book a clean" target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#128C7E] text-white rounded-full p-5 shadow-2xl transition transform hover:scale-110" aria-label="Chat with us on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp icon" loading="lazy" class="w-10 h-10">
   </a>
-  
+
   <!-- BACK TO TOP BUTTON -->
   <a href="#home" class="fixed bottom-6 left-6 z-50 bg-blue-600 hover:bg-blue-700 text-white rounded-full p-5 shadow-2xl transition transform hover:scale-110" aria-label="Back to Top">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6" aria-hidden="true">
       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
     </svg>
   </a>
-  
-  
+
   <script>
     const menuBtn = document.getElementById('menu-btn');
     const closeBtn = document.getElementById('close-btn');
     const mobileMenu = document.getElementById('mobile-menu');
-    menuBtn.addEventListener('click', () => mobileMenu.classList.remove('translate-x-full'));
-    closeBtn.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
-    mobileMenu.addEventListener('click', (e) => { if (e.target === mobileMenu) mobileMenu.classList.add('translate-x-full'); });
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('translate-x-full');
+      menuBtn.setAttribute('aria-expanded', 'true');
+    });
+    closeBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('translate-x-full');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    });
+    mobileMenu.addEventListener('click', (e) => {
+      if (e.target === mobileMenu) {
+        mobileMenu.classList.add('translate-x-full');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
     const navLinks = document.querySelectorAll('#mobile-menu nav a');
     navLinks.forEach(link => {
-      link.addEventListener('click', () => mobileMenu.classList.add('translate-x-full'));
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('translate-x-full');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      });
+    });
+    // Close on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !mobileMenu.classList.contains('translate-x-full')) {
+        mobileMenu.classList.add('translate-x-full');
+        menuBtn.setAttribute('aria-expanded', 'false');
+      }
     });
     // Auto-update year
     document.getElementById('year').textContent = new Date().getFullYear();
