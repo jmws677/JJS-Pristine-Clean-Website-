@@ -418,24 +418,55 @@
     </section>
   
     <!-- VIDEOS SECTION -->
-    <section id="videos" class="my-20">
-      <h3 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">Our Cleaning Videos</h3>
-      <p class="text-center text-gray-600 mb-8">Watch our team in action! Check out before-and-after transformations and tips for keeping your car and property pristine.</p>
-      <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
-        <!-- Video 1: Porsche 911 Clean -->
-        <div class="bg-white p-4 rounded-2xl shadow-xl">
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DTqHCq9iH6K/?igsh=MW41ODljbXVtZTZteQ==" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
-          <p class="text-center text-gray-600 mt-4">Porsche 911 Clean</p>
-        </div>
-        <!-- Video 2: Porsche Taycan Clean -->
-        <div class="bg-white p-4 rounded-2xl shadow-xl">
-          <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DTLe2R8CPpg/?igsh=MXFleGZzcmZobmFyNA==" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"></blockquote>
-          <p class="text-center text-gray-600 mt-4">Porsche Taycan Clean</p>
-        </div>
-      </div>
-      <p class="text-center mt-8 text-gray-600">More videos coming soon!</p>
-    </section>
-  
+<section id="videos" class="my-20">
+  <h3 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12">
+    Our Cleaning Videos
+  </h3>
+
+  <p class="text-center text-gray-600 mb-8">
+    Watch real before-and-after transformations from our recent jobs.
+  </p>
+
+  <div class="grid gap-8 md:grid-cols-2 max-w-5xl mx-auto">
+
+    <!-- Video 1 -->
+    <div class="bg-white p-4 rounded-2xl shadow-xl">
+      <video
+        class="w-full rounded-xl"
+        controls
+        preload="metadata"
+        playsinline>
+        <source src="videos/911-jjs-pristine-clean.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="text-center text-gray-600 mt-4 font-semibold">
+        Porsche 911 – Full Valet
+      </p>
+    </div>
+
+    <!-- Video 2 -->
+    <div class="bg-white p-4 rounded-2xl shadow-xl">
+      <video
+        class="w-full rounded-xl"
+        controls
+        preload="metadata"
+        playsinline>
+        <source src="videos/v2-jjs-pristine-clean.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <p class="text-center text-gray-600 mt-4 font-semibold">
+        Porsche Taycan – Premium Clean
+      </p>
+    </div>
+
+  </div>
+
+  <p class="text-center mt-8 text-gray-600">
+    More videos coming soon!
+  </p>
+</section>
+
+
     <!-- CONTACT -->
     <section id="contact-page" class="my-12 text-center pb-8">
       <h3 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">Get In Touch</h3>
@@ -484,7 +515,6 @@
     </svg>
   </a>
   
-  <script async src="//www.instagram.com/embed.js"></script>
   
   <script>
     const menuBtn = document.getElementById('menu-btn');
