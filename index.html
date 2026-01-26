@@ -39,7 +39,7 @@
       "@type": "Review",
       "reviewRating": {
         "@type": "Rating",
-        "ratingValue": "5.0"
+        "ratingValue": "5"
       }
     }
   }
@@ -417,17 +417,22 @@
       <!-- TRUSTPILOT REVIEWS -->
       <div class="mt-12">
         <h3 class="text-3xl font-bold text-center text-blue-800 mb-8">Our Trustpilot Reviews</h3>
-        <p class="text-center text-2xl font-bold text-green-600 mb-6">TrustScore 5.0 | Excellent | 2 Reviews</p> <!-- Updated to match -->
-        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <p class="text-center text-2xl font-bold text-green-600 mb-6" id="trust-score">TrustScore 5 | Excellent | 3 Reviews</p>
+        <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto" id="reviews-container">
           <blockquote class="bg-white p-8 rounded-2xl shadow-xl">
             <div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div>
-            <p class="text-gray-700 italic">"Cleaned my car and did a really good job. Comms from Sam before and on the day were excellent, they turned up on time with all the kit they needed and were professional."</p>
-            <p class="mt-4 font-semibold">— 14 January 2026</p>
+            <p class="text-gray-700 italic">"Amazing job. A great team, my car feels newer than when i bought it. They were very professional, polite and on time. Would definitely recommend"</p>
+            <p class="mt-4 font-semibold">— 21 January 2026</p>
           </blockquote>
           <blockquote class="bg-white p-8 rounded-2xl shadow-xl">
             <div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div>
-            <p class="text-gray-700 italic">"Super impressed with this service. Arranged a convenient time for them to come to our home and clean our cars, immaculately and efficiently. Polite, prompt and great communication."</p>
-            <p class="mt-4 font-semibold">— 6 January 2026</p>
+            <p class="text-gray-700 italic">"Cleaned my car really well…. Cleaned my car and did a really good job. Comms from Sam before and on the day were excellent, they turned up on time with all the kit they needed and were professional."</p>
+            <p class="mt-4 font-semibold">— 16 January 2026</p>
+          </blockquote>
+          <blockquote class="bg-white p-8 rounded-2xl shadow-xl">
+            <div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">★★★★★</div>
+            <p class="text-gray-700 italic">"Super impressed with this service. Super impressed with this service. Arranged a convenient time for them to come to our home and clean our cars, immaculately and efficiently. Polite, prompt and great communication."</p>
+            <p class="mt-4 font-semibold">— 15 January 2026</p>
           </blockquote>
         </div>
         <p class="text-center mt-8"><a href="https://uk.trustpilot.com/review/jjspristineclean.co.uk" target="_blank" rel="noopener noreferrer" class="text-blue-600 font-bold hover:underline">See more on Trustpilot</a></p>
@@ -523,6 +528,48 @@
     });
     // Auto-update year
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Fetch Trustpilot data dynamically
+    async function updateTrustpilot() {
+      try {
+        const response = await fetch('https://uk.trustpilot.com/review/jjspristineclean.co.uk');
+        const html = await response.text();
+        const parser = new DOMParser();
+        const doc = parser.parseFromString(html, 'text/html');
+        
+        // Extract TrustScore
+        const scoreElement = doc.querySelector('[data-trustscore]');
+        const trustScore = scoreElement ? scoreElement.getAttribute('data-trustscore') : '5';
+        const ratingLabel = scoreElement ? scoreElement.nextElementSibling.textContent.trim() : 'Excellent';
+        const reviewCountElement = doc.querySelector('[data-reviews-count]');
+        const reviewCount = reviewCountElement ? reviewCountElement.textContent.trim() : '3 Reviews';
+        
+        document.getElementById('trust-score').textContent = `TrustScore ${trustScore} | ${ratingLabel} | ${reviewCount}`;
+        
+        // Extract reviews (latest 3)
+        const reviews = doc.querySelectorAll('.review-card');
+        const container = document.getElementById('reviews-container');
+        container.innerHTML = ''; // Clear existing
+        Array.from(reviews).slice(0, 3).forEach(review => {
+          const stars = '★★★★★'; // Assuming 5 stars based on current data
+          const text = review.querySelector('.review-content__text').textContent.trim();
+          const date = review.querySelector('time').getAttribute('datetime').split('T')[0]; // Format date
+          const blockquote = `
+            <blockquote class="bg-white p-8 rounded-2xl shadow-xl">
+              <div class="flex mb-4 text-yellow-400 text-2xl" style="text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);">${stars}</div>
+              <p class="text-gray-700 italic">"${text}"</p>
+              <p class="mt-4 font-semibold">— ${date}</p>
+            </blockquote>
+          `;
+          container.innerHTML += blockquote;
+        });
+      } catch (error) {
+        console.error('Failed to fetch Trustpilot data:', error);
+        // Fallback to hardcoded if fetch fails
+      }
+    }
+    // Call on load
+    window.addEventListener('load', updateTrustpilot);
   </script>
 </body>
 </html>
