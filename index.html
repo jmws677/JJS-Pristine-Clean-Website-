@@ -542,7 +542,7 @@
         const trustScore = scoreElement ? scoreElement.getAttribute('data-trustscore') : '5';
         const ratingLabel = scoreElement ? scoreElement.nextElementSibling.textContent.trim() : 'Excellent';
         const reviewCountElement = doc.querySelector('[data-reviews-count]');
-        const reviewCount = reviewCountElement ? reviewCountElement.textContent.trim() : '4 Reviews';
+        const reviewCount = reviewCountElement ? reviewCountElement.textContent.trim() : '5 Reviews';
         
         document.getElementById('trust-score').textContent = `TrustScore ${trustScore} | ${ratingLabel} | ${reviewCount}`;
         
@@ -564,10 +564,10 @@
           container.innerHTML += blockquote;
         });
          } catch (error) {
-      console.error('Failed to fetch Trustpilot data:', error);
-      // Fallback to 4 reviews
-      document.getElementById('trust-score').textContent = "TrustScore 5 | Excellent | 4 Reviews";
-    }
+    console.error('Failed to fetch Trustpilot data:', error);
+    // Fallback to 5 reviews
+    document.getElementById('trust-score').textContent = "TrustScore 5 | Excellent | 5 Reviews";
+}
     }
     // Call on load
     window.addEventListener('load', updateTrustpilot);
