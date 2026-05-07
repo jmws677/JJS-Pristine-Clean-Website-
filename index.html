@@ -267,7 +267,9 @@
     @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
     .hero-title {
       font-family: 'Oswald', sans-serif;
-      font-size: clamp(48px, 7vw, 96px);
+      font-size: clamp(24px, 7.5vw, 96px);
+      word-break: break-word;
+      overflow-wrap: break-word;
       font-weight: 700;
       line-height: 0.95;
       letter-spacing: -0.01em;
@@ -821,16 +823,39 @@
     }
     @media (max-width: 640px) {
       section { padding: 60px 0; }
-      .hero-title { font-size: 38px; }
       .hero-sub { font-size: 15px; }
-      .footer-bottom { flex-direction: column; text-align: center; }
+      .hero-content { text-align: center; }
+      .hero-trust { justify-content: center; }
+      .hero-actions { justify-content: center; }
+      .hero-badge { margin: 0 auto 28px; }
+      .section-title, .section-sub, .section-label { text-align: center; }
+      .about-text { text-align: center; }
+      .about-text p { text-align: center; }
+      .about-cta { justify-content: center; flex-wrap: wrap; }
+      .quote-block { text-align: center; }
+      .about-stats .stat-card { text-align: center; }
+      .price-card, .service-card, .why-card, .membership-card, .review-card { text-align: center; }
+      .service-icon, .why-icon { margin: 0 auto 20px; }
+      .trust-score-bar { text-align: center; align-items: center; }
+      .contact-info-box { text-align: center; }
+      .info-row { flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+      .social-row { justify-content: center; }
+      .footer-grid { text-align: center; }
+      .footer-links { align-items: center; }
+      .footer-bottom { text-align: center; }
+      .faq-q { text-align: left; }
       .section-title { font-size: 28px; }
-      .hero-actions { flex-direction: column; }
       .btn-primary, .btn-outline { width: 100%; text-align: center; justify-content: center; }
       .price-amount { font-size: 38px; }
       .mem-price { font-size: 36px; }
       .contact-btn { font-size: 17px; padding: 18px 20px; }
       .stat-number { font-size: 36px; }
+      .hero-title { word-break: break-word; overflow-wrap: break-word; }
+      .video-label { text-align: center; }
+      .footer-brand p { margin: 0 auto; text-align: center; }
+      .booking-form { grid-template-columns: 1fr; }
+      .form-group.full { grid-column: 1; }
+      .tb-text { text-align: left; }
     }
 
     /* SCROLL REVEAL */
