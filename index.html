@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://www.jjspristineclean.co.uk/">
   <meta property="og:type" content="website">
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"JJS Pristine Clean","image":"https://www.jjspristineclean.co.uk/og-preview.jpg","telephone":"07923613796","email":"info@jjspristineclean.co.uk","address":{"@type":"PostalAddress","addressLocality":"Bournemouth","addressRegion":"England","postalCode":"BH","addressCountry":"GB"},"areaServed":"Dorset, Hampshire, Wiltshire, and surrounding areas","url":"https://www.jjspristineclean.co.uk/","priceRange":"$$","openingHours":"Mo-Su"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"JJS Pristine Clean","image":"https://www.jjspristineclean.co.uk/og-preview.jpg","email":"info@jjspristineclean.co.uk","address":{"@type":"PostalAddress","addressLocality":"Bournemouth","addressRegion":"England","postalCode":"BH","addressCountry":"GB"},"areaServed":"Dorset, Hampshire, Wiltshire, and surrounding areas","url":"https://www.jjspristineclean.co.uk/","priceRange":"$$","openingHours":"Mo-Su"}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"Mobile Car Valeting","provider":{"@type":"LocalBusiness","name":"JJS Pristine Clean"},"areaServed":["Bournemouth","Poole","Christchurch","Dorset"],"hasOfferCatalog":{"@type":"OfferCatalog","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Exterior Wash"},"price":"25","priceCurrency":"GBP"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Interior Clean"},"price":"30","priceCurrency":"GBP"},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Full Valet"},"price":"50","priceCurrency":"GBP"}]}}</script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -64,21 +64,12 @@
     h1,h2,h3,h4,h5 { font-family: 'Oswald', sans-serif; font-weight: 600; letter-spacing: 0.02em; }
 
     /* ANNOUNCEMENT BAR */
-    .announcement {
-      background: linear-gradient(90deg, #0a4a2e, #0d6b3f, #0a4a2e);
-      background-size: 200% 100%;
-      animation: shimmer 4s ease-in-out infinite;
-      color: #6ee7b7;
-      text-align: center;
-      padding: 10px 20px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      position: sticky;
-      top: 0;
-      z-index: 100;
+    .announcement { background: linear-gradient(90deg, #0a4a2e, #0d6b3f, #0a4a2e); background-size: 200% 100%; animation: shimmer 4s ease-in-out infinite; color: #6ee7b7; text-align: center; padding: 10px 20px; font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; position: sticky; top: 0; z-index: 100; white-space: nowrap; }
+    .ann-short { display: none; }
+    @media (max-width: 640px) {
+      .announcement { font-size: 12px; padding: 10px 12px; }
+      .ann-full { display: none; }
+      .ann-short { display: inline; }
     }
     @keyframes shimmer {
       0%,100% { background-position: 0% 50%; }
@@ -1283,7 +1274,8 @@
 
   <!-- ANNOUNCEMENT BAR -->
   <div class="announcement" role="banner">
-    ✦ 100% Customer Happiness Guaranteed — Not thrilled? We re-clean FREE! ✦
+    <span class="ann-full">✦ 100% Customer Happiness Guaranteed — Not thrilled? We re-clean FREE! ✦</span>
+    <span class="ann-short">✦ 100% Satisfaction — Re-clean FREE! ✦</span>
   </div>
 
   <!-- HEADER -->
@@ -2057,13 +2049,6 @@
               </div>
             </div>
             <div class="info-row">
-              <div class="info-icon"><svg fill="none" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg></div>
-              <div>
-                <div class="info-label">Email</div>
-                <a href="mailto:info@jjspristineclean.co.uk" class="info-value">info@jjspristineclean.co.uk</a>
-              </div>
-            </div>
-            <div class="info-row">
               <div class="info-icon"><svg fill="none" stroke-width="1.5" stroke-linecap="round" viewBox="0 0 24 24"><path d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg></div>
               <div>
                 <div class="info-label">Area Served</div>
@@ -2178,6 +2163,18 @@
         }
       });
     });
+
+    // FIX STICKY HEADER OVERLAP — measure announcement bar height dynamically
+    function fixHeaderOffset() {
+      const bar = document.querySelector('.announcement');
+      const header = document.querySelector('header');
+      if (bar && header) {
+        const h = bar.offsetHeight;
+        header.style.top = h + 'px';
+      }
+    }
+    fixHeaderOffset();
+    window.addEventListener('resize', fixHeaderOffset);
 
     // SCROLL PROGRESS BAR
     const progressBar = document.getElementById('scroll-progress');
